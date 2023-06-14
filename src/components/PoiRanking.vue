@@ -33,15 +33,35 @@ const initChart = () => {
     "四川成都(益州)",
     "浙江杭州(临安)",
     "江苏苏州(苏州)",
-    "陕西西安(西京)",
+    "陕西西安(长安)",
     "河南洛阳(东都)",
   ];
   const myChart = echarts.init(mapChart);
   // 绘制图表
   let option = {
-    // title: {
-    //   text: "地名排行榜",
-    // },
+    title: {
+      text: "\t地名排行榜\t",
+      top: 20,
+      bottom: 20,
+      left: 2,
+      padding: [5, 5],
+      backgroundColor: "#fff",
+      borderWidth: 2,
+      borderColor: "#b87333",
+      borderRadius: 25,
+      textStyle: {
+        fontSize: 32,
+        lineHeight: 56,
+        // width: 100,
+        // height: 100,
+        color: "#b87333",
+        fontFamily: "SimSun",
+        textShadowColor: "#d1ad69",
+        textShadowBlur: 1,
+        textShadowOffsetX: 1,
+        textShadowOffsetY: 1,
+      },
+    },
     tooltip: {
       trigger: "axis",
       axisPointer: {
@@ -53,6 +73,7 @@ const initChart = () => {
       left: "5%",
       right: "4%",
       bottom: "3%",
+      top: "15%",
       containLabel: true,
     },
     xAxis: {
@@ -98,7 +119,7 @@ const initChart = () => {
           show: true,
           position: "right",
           color: "#9d7294",
-          offset: [10, 0],
+          offset: [6, 0],
         },
       },
     ],

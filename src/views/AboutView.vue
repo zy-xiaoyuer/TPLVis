@@ -47,6 +47,29 @@ const initChart = () => {
 
   // 绘制图表
   let option = {
+    title: {
+      text: "\t年代山水图\t",
+      top: 20,
+      bottom: 20,
+      left: 100,
+      padding: [5, 5],
+      backgroundColor: "#fff",
+      borderWidth: 2,
+      borderColor: "#b87333",
+      borderRadius: 25,
+      textStyle: {
+        fontSize: 32,
+        lineHeight: 56,
+        // width: 100,
+        // height: 100,
+        color: "#b87333",
+        fontFamily: "SimSun",
+        textShadowColor: "#d1ad69",
+        textShadowBlur: 1,
+        textShadowOffsetX: 1,
+        textShadowOffsetY: 1,
+      },
+    },
     color: "#d2691e",
     tooltip: {
       trigger: "item",
@@ -287,7 +310,7 @@ const initChart = () => {
           show: false, // 不显示坐标轴线
         },
         position: "top",
-        offset: -260,
+        offset: -235,
       },
     ],
     yAxis: [
@@ -297,6 +320,21 @@ const initChart = () => {
       },
     ],
     series: [
+      // {
+      //   type: "line",
+
+      //   // emphasis: {
+      //   //   focus: "series",
+      //   // },
+      //   // data: yData,
+      //   data: [
+      //     -60, -60, -60, -60, -60, -60, -60, -60, -60, -60, -60, -60, -60, -60,
+      //     -60, -60, -60, -60, -60, -60, -60, -60, -60, -60, -60, -60, -60, -60,
+      //     -60, -60, -60, -60, -60, -60, -60, -60, -60, -60, -60, -60, -60, -60,
+      //     -60, -60, -60, -60, -60, -60, -60, -60, -60, -60, -60, -60, -60, -60,
+      //     -60, -60, -60, -60, -60,
+      //   ],
+      // },
       // 诗词数量
       {
         type: "line",
@@ -456,8 +494,8 @@ const initChart = () => {
         n++;
         // console.log("n", n);
         let m: any = item.data[i];
-        // item.data[i] = m * item.num + 70;
         item.data[i] = -1 * item.num + 70;
+        // item.data[i] = -1 * item.num - 50;
       }
     }
     // console.log("item.data", item.data);
