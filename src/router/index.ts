@@ -1,5 +1,7 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
 import HomeView from "../views/HomeView.vue";
+import WordcloudChart from "@/components/WordcloudChart.vue";
+import HotBar from "@/components/HotBar.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -15,6 +17,17 @@ const routes: Array<RouteRecordRaw> = [
     // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+  },
+  {
+    path: "/wordcloud",
+    name: "wordcloud",
+    // component: () => import("../views/WordcloudChart.vue"),
+    component: WordcloudChart,
+  },
+  {
+    path: "/hotbar",
+    name: "hotbar",
+    component: HotBar,
   },
 ];
 

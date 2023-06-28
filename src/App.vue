@@ -1,7 +1,9 @@
 <template>
   <nav>
     <router-link to="/">地图</router-link> |
-    <router-link to="/about">山水图</router-link>
+    <router-link to="/about">山水图</router-link> |
+    <router-link to="/wordcloud">词云图</router-link> |
+    <router-link to="/hotbar">热力直方图</router-link>
   </nav>
   <router-view />
 </template>
